@@ -27,28 +27,28 @@
             </div>
             <div class="row">
                 <div class="border p-2">
-                    <form action="" method="post">
+                    <form thaction="@{/comercio/produtos/add-prod}" th:object="${produto}" method="post">
                         <div class="row">
 
 
 
                             <div class="form-group col-md-12">
                                 <label for="nome" class="col-form-label">Nome:</label>
-                                <input type="text" class="form-control" id="nome" placeholder="Nome">
+                                <input type="text" thfield="*{nome}" class="form-control" id="nome" placeholder="Nome">
                             </div>
 
 
 
                             <div class="form-group col-md-12">
                                 <label for="descricao" class="col-form-label">Descrição:</label>
-                                <textarea class="form-control" id="descricao" placeholder="Descrição"></textarea>
+                                <textarea thfield="*{descricao}" class="form-control"  rows="4" id="descricao" placeholder="Descrição"></textarea>
                             </div>
 
 
 
                             <div class="form-group col-md-12">
                                 <label for="codigoBarras" class="col-form-label">Código de Barras:</label>
-                                <input type="text" class="form-control" id="codigoBarras"
+                                <input type="text" thfield="*{codigoBarras}" class="form-control" id="codigoBarras"
                                     placeholder="Código de Barras">
                             </div>
 
@@ -56,7 +56,7 @@
 
                             <div class="form-group col-md-12">
                                 <label for="preco" class="col-form-label">Preço:</label>
-                                <input type="text" class="form-control" id="preco" placeholder="Preço">
+                                <input type="text" thfield="*{preco}"class="form-control" id="preco" placeholder="Preço">
                             </div>
 
 
